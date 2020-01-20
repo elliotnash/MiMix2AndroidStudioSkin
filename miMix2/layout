@@ -1,0 +1,40 @@
+parts {
+  device {
+    display {
+      width 1080
+      height 2160
+      x 21
+      y 26
+    }
+  }
+  portrait {
+    background {
+      image mimix2background.png
+    }
+
+    foreground {
+      mask  mimix2framecrop2.png
+    }
+    onion {
+       image port_fore.webp
+     }
+
+  }
+}
+layouts {
+  portrait {
+    width 1152
+    height 2327
+    event EV_SW:0:1
+    part1 {
+      name portrait
+      x 0
+      y 0
+    }
+    part2 {
+      name device
+      x 14
+      y 14
+    }
+  }
+}
